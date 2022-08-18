@@ -37,4 +37,20 @@ public class AccountService {
 
         return null;
     }
+    
+    public boolean forgotPassword(String email, String path){
+        UserDB userdb = new UserDB();
+        
+        try {
+            User user = userdb.get(email);
+            if (email.equals(user.getEmail())) {
+                return true;
+            }
+            }catch (Exception e) {
+        }
+
+        return false;
+        
+        
+    }
 }

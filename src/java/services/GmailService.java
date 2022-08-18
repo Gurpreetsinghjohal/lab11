@@ -27,7 +27,7 @@ public class GmailService {
         String body = "";
         try {
             // read whole template into a single variable (body)
-            BufferedReader br = new BufferedReader(new FileReader(new File(template)));
+            BufferedReader br = new BufferedReader(new FileReader(new File(template))); 
 
             String line = br.readLine();
             while (line != null) {
